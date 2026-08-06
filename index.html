@@ -1,187 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>French Atelier — Audience Intelligence</title>
-<meta name="description" content="French Atelier audience intelligence, 1 April – 31 July 2026. Meta Ads demographic breakdowns for the eTeacher Group board." />
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=satoshi@400,500,700,900&f%5B%5D=bespoke-serif@400,500&display=swap" />
-<link rel="stylesheet" href="styles.css" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Cpath d='M10 23V9h12M10 16h8' stroke='%2345A0FF' stroke-width='2.4' fill='none'/%3E%3C/svg%3E" />
-<script id="fa-data" type="application/json">{"meta":{"brand":"French Atelier","parent":"eTeacher Group","from":"2026-04-01","to":"2026-07-31","spend":234237.42,"leads":10659,"cpl":21.98,"campaigns":6,"markets":"United States + Canada","source":"French.xlsx — Meta Ads demographic breakdowns","top4Share":77.5,"share45plus":76.1,"share55plus":56.6,"femaleShare":70.8,"bestCPL":{"k":"Ontario","cpl":20.29},"worstCPL":{"k":"Massachusetts","cpl":25.35},"bestAgeCPL":{"k":"65+","cpl":21.49}},"region":[{"k":"Texas","spend":75248.89,"leads":3442,"leadShare":32.29,"spendShare":32.13,"cpl":21.86,"country":"US"},{"k":"California","spend":38820.18,"leads":1767,"leadShare":16.58,"spendShare":16.57,"cpl":21.97,"country":"US"},{"k":"New York","spend":34722.16,"leads":1590,"leadShare":14.92,"spendShare":14.82,"cpl":21.84,"country":"US"},{"k":"Florida","spend":30952.49,"leads":1466,"leadShare":13.75,"spendShare":13.21,"cpl":21.11,"country":"US"},{"k":"Illinois","spend":12364.88,"leads":541,"leadShare":5.08,"spendShare":5.28,"cpl":22.86,"country":"US"},{"k":"Pennsylvania","spend":11222.39,"leads":491,"leadShare":4.61,"spendShare":4.79,"cpl":22.86,"country":"US"},{"k":"New Jersey","spend":8591.26,"leads":375,"leadShare":3.52,"spendShare":3.67,"cpl":22.91,"country":"US"},{"k":"Massachusetts","spend":7580.94,"leads":299,"leadShare":2.81,"spendShare":3.24,"cpl":25.35,"country":"US"},{"k":"Ontario","spend":5072.43,"leads":250,"leadShare":2.35,"spendShare":2.17,"cpl":20.29,"country":"CA"},{"k":"Louisiana","spend":4621.19,"leads":203,"leadShare":1.9,"spendShare":1.97,"cpl":22.76,"country":"US"},{"k":"British Columbia","spend":802.0,"leads":52,"leadShare":0.49,"spendShare":0.34,"cpl":15.42,"country":"CA"},{"k":"Washington","spend":1222.43,"leads":50,"leadShare":0.47,"spendShare":0.52,"cpl":24.45,"country":"US"},{"k":"Alberta","spend":1331.89,"leads":50,"leadShare":0.47,"spendShare":0.57,"cpl":26.64,"country":"CA"},{"k":"Oregon","spend":699.61,"leads":37,"leadShare":0.35,"spendShare":0.3,"cpl":18.91,"country":"US"},{"k":"Manitoba","spend":372.27,"leads":20,"leadShare":0.19,"spendShare":0.16,"cpl":18.61,"country":"CA"},{"k":"Delaware","spend":226.56,"leads":11,"leadShare":0.1,"spendShare":0.1,"cpl":20.6,"country":"US"},{"k":"Rhode Island","spend":236.38,"leads":10,"leadShare":0.09,"spendShare":0.1,"cpl":23.64,"country":"US"},{"k":"Nova Scotia","spend":148.27,"leads":5,"leadShare":0.05,"spendShare":0.06,"cpl":29.65,"country":"CA"},{"k":"Unknown","spend":1.2,"leads":0,"leadShare":0.0,"spendShare":0.0,"cpl":null,"country":"—"}],"age":[{"k":"18-24","spend":5241.49,"leads":241,"leadShare":2.26,"spendShare":2.24,"cpl":21.75,"country":"US"},{"k":"25-34","spend":19436.48,"leads":876,"leadShare":8.22,"spendShare":8.3,"cpl":22.19,"country":"US"},{"k":"35-44","spend":31412.74,"leads":1433,"leadShare":13.44,"spendShare":13.41,"cpl":21.92,"country":"US"},{"k":"45-54","spend":46205.98,"leads":2072,"leadShare":19.44,"spendShare":19.73,"cpl":22.3,"country":"US"},{"k":"55-64","spend":52188.77,"leads":2325,"leadShare":21.81,"spendShare":22.28,"cpl":22.45,"country":"US"},{"k":"65+","spend":79737.91,"leads":3711,"leadShare":34.82,"spendShare":34.04,"cpl":21.49,"country":"US"},{"k":"Unknown","spend":14.03,"leads":1,"leadShare":0.01,"spendShare":0.01,"cpl":14.03,"country":"—"}],"gender":[{"k":"female","spend":167330.5,"leads":7547,"leadShare":70.8,"spendShare":71.44,"cpl":22.17,"country":"US"},{"k":"male","spend":64049.88,"leads":2974,"leadShare":27.9,"spendShare":27.34,"cpl":21.54,"country":"US"},{"k":"unknown","spend":2857.02,"leads":138,"leadShare":1.29,"spendShare":1.22,"cpl":20.7,"country":"US"}]}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The French Atelier — Client Demographics</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1128; --navy-2:#080E20; --navy-3:#05081E; --navy-4:#141A40;
+  --gold:#D8BC85; --gold-deep:#C8A96B; --gold-soft:#E4CC8E;
+  --cream:#F3EEE3; --cream-dim:rgba(243,238,227,.62); --cream-faint:rgba(243,238,227,.34);
+  --line:rgba(216,188,133,.20); --line-soft:rgba(216,188,133,.10);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,-apple-system,sans-serif;
+  --shadow-lift:0 1px 0 rgba(255,255,255,.05) inset, 0 2px 6px rgba(0,0,0,.34), 0 12px 28px rgba(0,0,0,.42), 0 40px 80px -20px rgba(0,0,0,.60);
+  --shadow-deep:0 1px 0 rgba(255,255,255,.06) inset, 0 4px 12px rgba(0,0,0,.40), 0 24px 56px rgba(0,0,0,.50), 0 72px 120px -32px rgba(0,0,0,.72);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--navy-3); color:var(--cream); font-family:var(--sans);
+  font-weight:300; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  font-variant-numeric:tabular-nums; font-feature-settings:"tnum" 1;
+}
+.field{position:fixed;inset:0;z-index:0;pointer-events:none}
+.field::before{content:"";position:absolute;inset:0;
+  background:
+   radial-gradient(1200px 720px at 18% 8%, rgba(216,188,133,.16), transparent 62%),
+   radial-gradient(900px 600px at 88% 22%, rgba(80,110,220,.16), transparent 60%),
+   radial-gradient(1000px 800px at 50% 100%, rgba(200,169,107,.10), transparent 64%),
+   linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 44%, var(--navy-3) 100%);}
+.field::after{content:"";position:absolute;inset:0;opacity:.30;
+  background-image:radial-gradient(rgba(243,238,227,.16) 1px, transparent 1px);
+  background-size:3px 3px;mix-blend-mode:overlay}
+.wrap{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 40px}
+
+/* ---------- masthead ---------- */
+header.mast{padding:52px 0 0}
+.mast-row{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;
+  border-bottom:1px solid var(--line);padding-bottom:22px}
+.mast-row img.logo{height:56px;width:auto;display:block}
+.mast-meta{text-align:right;font-size:11px;letter-spacing:.20em;text-transform:uppercase;color:var(--cream-faint);line-height:2}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 40px;max-width:960px}
+.eyebrow{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:26px}
+h1{font-family:var(--serif);font-weight:400;letter-spacing:-.022em;line-height:.98;
+  font-size:clamp(46px,6.6vw,104px)}
+h1 em{font-style:italic;color:var(--gold)}
+.lede{margin-top:26px;font-size:clamp(16px,1.35vw,20px);line-height:1.62;color:var(--cream-dim);max-width:66ch;font-weight:300}
+
+/* ---------- headline stat deck ---------- */
+.deck{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin:66px 0 96px;perspective:1600px}
+.stat{position:relative;padding:34px 28px 30px;border-radius:18px;
+  background:linear-gradient(158deg, rgba(243,238,227,.085), rgba(243,238,227,.022) 46%, rgba(10,17,40,.42));
+  border:1px solid var(--line);box-shadow:var(--shadow-lift);
+  transform:translateZ(0) rotateX(.4deg);transition:transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s}
+.stat:hover{transform:translateY(-8px) rotateX(0) scale(1.014);box-shadow:var(--shadow-deep)}
+.stat::before{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;
+  background:linear-gradient(140deg, rgba(255,255,255,.16), transparent 34%);opacity:.5;
+  -webkit-mask:linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);
+  -webkit-mask-composite:xor;mask-composite:exclude;padding:1px}
+.stat .n{font-family:var(--serif);font-weight:500;font-size:clamp(44px,4.6vw,68px);line-height:1;
+  color:var(--gold);letter-spacing:-.02em}
+.stat .n sup{font-size:.34em;top:-.05em;position:relative;vertical-align:baseline;color:var(--gold-deep);margin-left:3px;font-family:var(--sans);font-weight:400}
+.stat .l{margin-top:16px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);line-height:1.7}
+
+/* ---------- sections ---------- */
+section{padding:74px 0;border-top:1px solid var(--line-soft)}
+.sec-head{display:flex;align-items:baseline;gap:22px;margin-bottom:14px}
+.sec-num{font-family:var(--serif);font-size:15px;color:var(--gold-deep);letter-spacing:.1em}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.9vw,58px);letter-spacing:-.018em;line-height:1.04}
+.sec-sub{margin:16px 0 48px;font-size:16px;line-height:1.6;color:var(--cream-dim);max-width:62ch}
+
+/* ---------- ranked bars ---------- */
+.rank{display:flex;flex-direction:column;gap:3px}
+.row{display:grid;grid-template-columns:210px 1fr 92px;align-items:center;gap:22px;
+  padding:13px 20px;border-radius:12px;transition:background .35s, transform .35s;
+  background:linear-gradient(90deg, rgba(243,238,227,.035), transparent 70%)}
+.row:hover{background:linear-gradient(90deg, rgba(216,188,133,.10), rgba(243,238,227,.02) 70%);transform:translateX(5px)}
+.row .name{font-size:15px;letter-spacing:.005em;display:flex;align-items:center;gap:11px;font-weight:400}
+.flag{width:20px;height:13px;border-radius:2px;flex:0 0 auto;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.flag.us{background:linear-gradient(180deg,#B22234 0 20%,#F3EEE3 20% 40%,#B22234 40% 60%,#F3EEE3 60% 80%,#3C3B6E 80% 100%)}
+.flag.ca{background:linear-gradient(90deg,#D52B1E 0 26%,#F3EEE3 26% 74%,#D52B1E 74% 100%)}
+.track{height:12px;border-radius:99px;background:rgba(243,238,227,.055);overflow:hidden;position:relative;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.5)}
+.fill{height:100%;width:0;border-radius:99px;transition:width 1.5s cubic-bezier(.2,.75,.15,1);
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold-soft) 62%,#FFF3D6);
+  box-shadow:0 0 20px rgba(216,188,133,.42), 0 1px 0 rgba(255,255,255,.4) inset}
+.row.ca .fill{background:linear-gradient(90deg,#4E63B8,#8FA6E8 66%,#CFDBFF);box-shadow:0 0 20px rgba(120,150,235,.40), 0 1px 0 rgba(255,255,255,.35) inset}
+.pct{font-family:var(--serif);font-size:22px;font-weight:500;text-align:right;color:var(--cream)}
+.row.ca .pct{color:#B9C8F5}
+.tiny .name,.tiny .pct{opacity:.62}
+.tiny .pct{font-size:18px}
+
+.callout{margin-top:44px;padding:30px 34px;border-radius:16px;border:1px solid var(--line);
+  background:linear-gradient(140deg, rgba(216,188,133,.13), rgba(10,17,40,.34));box-shadow:var(--shadow-lift);
+  display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.callout .big{font-family:var(--serif);font-size:clamp(46px,5vw,72px);line-height:.9;color:var(--gold);font-weight:500}
+.callout .txt{font-size:17px;line-height:1.55;color:var(--cream);max-width:52ch;font-weight:300}
+
+/* ---------- age ---------- */
+.age-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.cols{display:flex;align-items:flex-end;gap:20px;height:340px;padding-top:34px}
+.col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:14px}
+.bar{width:100%;max-width:96px;border-radius:12px 12px 4px 4px;height:0;position:relative;
+  transition:height 1.5s cubic-bezier(.2,.75,.15,1);
+  background:linear-gradient(180deg,#FFF3D6,var(--gold-soft) 26%,var(--gold-deep) 100%);
+  box-shadow:0 0 28px rgba(216,188,133,.30), 0 -1px 0 rgba(255,255,255,.5) inset, 0 18px 34px rgba(0,0,0,.5)}
+.bar.c0{background:linear-gradient(180deg,#BFD4FF,#6E8BE0 30%,#3F57B8);box-shadow:0 0 26px rgba(110,139,224,.34),0 -1px 0 rgba(255,255,255,.45) inset,0 16px 32px rgba(0,0,0,.48)}
+.bar.c1{background:linear-gradient(180deg,#CDE3F5,#63A8D6 30%,#3777AC);box-shadow:0 0 26px rgba(99,168,214,.34),0 -1px 0 rgba(255,255,255,.45) inset,0 16px 32px rgba(0,0,0,.48)}
+.bar.c2{background:linear-gradient(180deg,#CFEBE0,#63BFA0 30%,#2F8A70);box-shadow:0 0 26px rgba(99,191,160,.34),0 -1px 0 rgba(255,255,255,.45) inset,0 16px 32px rgba(0,0,0,.48)}
+.bar.c3{background:linear-gradient(180deg,#FFEFC9,#E8C97C 30%,#C29B45);box-shadow:0 0 26px rgba(232,201,124,.38),0 -1px 0 rgba(255,255,255,.5) inset,0 16px 32px rgba(0,0,0,.48)}
+.bar.c4{background:linear-gradient(180deg,#FFE3B8,#EFAE63 30%,#C8792F);box-shadow:0 0 26px rgba(239,174,99,.38),0 -1px 0 rgba(255,255,255,.5) inset,0 16px 32px rgba(0,0,0,.48)}
+.bar.c5{background:linear-gradient(180deg,#FFF3D6,#F0C063 28%,#D19226);box-shadow:0 0 34px rgba(240,192,99,.46),0 -1px 0 rgba(255,255,255,.55) inset,0 20px 38px rgba(0,0,0,.52)}
+.bar .v{position:absolute;top:-34px;left:0;right:0;text-align:center;font-family:var(--serif);
+  font-size:24px;font-weight:500;color:var(--cream);white-space:nowrap}
+
+.col .lab{font-size:13px;letter-spacing:.1em;color:var(--cream-dim);white-space:nowrap}
+.col.hi .lab{color:var(--gold);font-weight:400}
+
+.stackwrap{display:flex;flex-direction:column;gap:26px}
+.stack{height:26px;border-radius:99px;overflow:hidden;display:flex;box-shadow:inset 0 1px 4px rgba(0,0,0,.55)}
+.seg{height:100%;width:0;transition:width 1.6s cubic-bezier(.2,.75,.15,1)}
+.seg.on{background:linear-gradient(90deg,var(--gold-deep),#FFF3D6);box-shadow:0 0 18px rgba(216,188,133,.4)}
+.seg.off{background:rgba(243,238,227,.08)}
+.stack-label{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--cream-dim);letter-spacing:.06em}
+.stack-label b{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--gold);letter-spacing:-.01em}
+
+/* ---------- gender ---------- */
+.gen{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;perspective:1400px}
+.gcard{position:relative;padding:42px 34px;border-radius:20px;text-align:center;
+  background:linear-gradient(158deg, rgba(243,238,227,.075), rgba(10,17,40,.40));
+  border:1px solid var(--line);box-shadow:var(--shadow-lift);
+  transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .55s}
+.gcard:hover{transform:translateY(-9px) scale(1.02);box-shadow:var(--shadow-deep)}
+.gcard.lead{background:linear-gradient(158deg, rgba(216,188,133,.20), rgba(10,17,40,.44))}
+.donut{width:150px;height:150px;margin:0 auto 24px;position:relative}
+.donut svg{transform:rotate(-90deg);display:block}
+.donut .ring{fill:none;stroke:rgba(243,238,227,.09);stroke-width:13}
+.donut .val{fill:none;stroke:var(--gold);stroke-width:13;stroke-linecap:round;
+  stroke-dasharray:0 999;transition:stroke-dasharray 1.7s cubic-bezier(.2,.75,.15,1)}
+.gcard.men .donut .val{stroke:#6E8BE0}
+.gcard.und .donut .val{stroke:#63BFA0}
+.donut .mid{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);
+  font-size:38px;font-weight:500;color:var(--cream)}
+.gcard h3{font-family:var(--serif);font-weight:400;font-size:27px;letter-spacing:.01em}
+
+/* ---------- takeaways ---------- */
+.take{display:grid;gap:2px}
+.take .t{display:grid;grid-template-columns:76px 1fr;gap:30px;align-items:start;
+  padding:30px 26px;border-radius:14px;transition:background .35s,transform .35s}
+.take .t:hover{background:rgba(216,188,133,.07);transform:translateX(5px)}
+.take .k{font-family:var(--serif);font-size:44px;line-height:.9;color:var(--gold);font-weight:500}
+.take .b{font-size:19px;line-height:1.5;color:var(--cream);font-weight:300;padding-top:5px}
+.take .b span{color:var(--gold-soft)}
+
+footer{padding:64px 0 78px;border-top:1px solid var(--line);margin-top:34px}
+.f-row{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-end}
+.f-row .fl{font-size:12px;line-height:2.1;color:var(--cream-faint);letter-spacing:.06em;max-width:60ch}
+.f-logos{display:flex;align-items:center;gap:26px;opacity:.8}
+.f-logos img{height:30px;width:auto}
+.btn{appearance:none;border:1px solid var(--line);background:rgba(243,238,227,.05);color:var(--cream);
+  font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  padding:13px 24px;border-radius:99px;cursor:pointer;transition:all .3s}
+.btn:hover{background:rgba(216,188,133,.16);border-color:var(--gold-deep)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .95s cubic-bezier(.2,.7,.2,1),transform .95s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:1080px){
+  .deck{grid-template-columns:repeat(2,1fr)}
+  .age-grid{grid-template-columns:1fr;gap:52px}
+  .row{grid-template-columns:160px 1fr 76px;gap:16px}
+}
+@media (max-width:720px){
+  .wrap{padding:0 22px}
+  .deck{grid-template-columns:1fr;gap:16px}
+  .gen{grid-template-columns:1fr}
+  .cols{height:260px;gap:9px}
+  .bar{max-width:100%;border-radius:8px 8px 3px 3px}
+  .bar .v{font-size:16px;top:-27px}
+  .col .lab{font-size:10px;letter-spacing:.02em}
+  .row{grid-template-columns:120px 1fr 62px;gap:12px;padding:11px 12px}
+  .row .name{font-size:13px;gap:8px}
+  .pct{font-size:18px}
+  .take .t{grid-template-columns:52px 1fr;gap:18px;padding:22px 14px}
+  .take .k{font-size:32px}
+  .take .b{font-size:16px}
+  .mast-row{flex-direction:column;align-items:flex-start;gap:18px}
+  .mast-meta{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none}
+}
+@media print{
+  .field{display:none}
+  body{background:#fff;color:#0A1128}
+  .btn{display:none}
+  section{break-inside:avoid;page-break-inside:avoid;border-top:1px solid #ccc}
+  h1,h2,.stat .n,.pct,.take .k,.callout .big,.stack-label b,.bar .v,.donut .mid{color:#0A1128!important}
+  .stat,.gcard,.callout{box-shadow:none;border:1px solid #ddd;background:#fbf9f4}
+  .lede,.sec-sub,.col .lab,.f-row .fl{color:#444}
+  .mast-row img.logo{filter:invert(1) brightness(.2)}
+}
+</style>
 </head>
 <body>
-<div class="field" aria-hidden="true"></div>
-<div class="orb orb-a" data-par="0.06" aria-hidden="true"></div>
-<div class="orb orb-b" data-par="-0.09" aria-hidden="true"></div>
-<div class="orb orb-c" data-par="0.05" aria-hidden="true"></div>
+<div class="field"></div>
 
-<nav class="topbar">
-  <div class="wrap">
-    <div class="brandmark">
-      <svg width="40" height="40" viewBox="0 0 44 44" role="img" aria-label="French Atelier logo">
-        <defs>
-          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#45A0FF"/><stop offset=".5" stop-color="#5B63F0"/><stop offset="1" stop-color="#9C6BFF"/>
-          </linearGradient>
-        </defs>
-        <rect x="1.2" y="1.2" width="41.6" height="41.6" rx="12" fill="none" stroke="url(#lg)" stroke-width="1.6" opacity=".85"/>
-        <path d="M14 32V12h15" fill="none" stroke="url(#lg)" stroke-width="2.6" stroke-linecap="square"/>
-        <path d="M14 22.6h10.5" fill="none" stroke="#F2D08B" stroke-width="2.6" stroke-linecap="square"/>
-        <circle cx="31.4" cy="30.6" r="2.6" fill="#F2D08B"/>
-      </svg>
-      <div>
-        <div class="bn">French Atelier</div>
-        <div class="bs">eTeacher Group</div>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="mast-row">
+      <img class="logo" src="assets/logo-white.png" alt="The French Atelier by Acadomia">
+      <div class="mast-meta">
+        Client demographics<br>
+        1 April – 31 July 2026<br>
+        United States &amp; Canada
       </div>
     </div>
-    <div class="spacer"></div>
-    <div class="pill hide-sm" id="navPeriod"></div>
-    <button class="printbtn" onclick="window.print()" aria-label="Print or save as PDF">
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 6V2h7v4M4.5 12H3V6h10v6h-1.5M4.5 10h7v4h-7z" stroke="currentColor" stroke-width="1.4"/></svg>
-      Print / PDF
-    </button>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow reveal">Board briefing</div>
+    <h1 class="reveal">Who our clients<br><em>actually are</em></h1>
+    <p class="lede reveal">Four states hold three quarters of our audience. Three quarters of it is over forty-five. Seven in ten are women. Everything on this page is a share of our client base.</p>
   </div>
-</nav>
 
-<main>
-  <!-- 1 · HERO -->
-  <section class="hero" id="hero">
-    <div class="wrap">
-      <div class="hero-top rv">
-        <div>
-          <div class="eyebrow"><i></i>Board review · Paid social</div>
-          <h1>French Atelier<span class="l2 grad-text">Audience Intelligence</span></h1>
-        </div>
-        <div class="hero-meta">
-          <div class="period" id="heroPeriod"></div>
-          <div class="sub" id="heroMarkets"></div>
-        </div>
-      </div>
-      <div class="kpis" id="kpis"></div>
+  <div class="deck">
+    <div class="stat reveal"><div class="n" data-cu="77.5" data-dec="1">0<sup>%</sup></div><div class="l">In our top four states</div></div>
+    <div class="stat reveal"><div class="n" data-cu="76.1" data-dec="1">0<sup>%</sup></div><div class="l">Aged 45 and over</div></div>
+    <div class="stat reveal"><div class="n" data-cu="70.8" data-dec="1">0<sup>%</sup></div><div class="l">Women</div></div>
+    <div class="stat reveal"><div class="n" data-cu="34.8" data-dec="1">0<sup>%</sup></div><div class="l">Aged 65 and over</div></div>
+  </div>
+
+  <!-- 01 GEOGRAPHY -->
+  <section id="geo">
+    <div class="sec-head reveal"><span class="sec-num">01</span><h2>The leading states</h2></div>
+    <p class="sec-sub reveal">Share of our client base by state and province.</p>
+    <div class="rank" id="rank"></div>
+    <div class="callout reveal">
+      <div class="big">77.5%</div>
+      <div class="txt">Texas, California, New York and Florida together account for more than three quarters of every client we hold.</div>
     </div>
   </section>
 
-  <!-- 2 · GEOGRAPHY -->
-  <section id="where">
-    <div class="wrap">
-      <div class="rv">
-        <div class="eyebrow"><i></i>Where our clients are</div>
-        <h2 class="sec">Four states carry the business.</h2>
-      </div>
-      <div class="card statband rv tilt">
-        <div class="big gold-text" id="top4">—</div>
-        <div class="copy" id="top4Copy"></div>
-      </div>
-      <div class="card card-pad rv" style="margin-top:clamp(18px,1.8vw,30px)">
-        <div class="rank-grid" id="rankGrid"></div>
-        <div class="foot-note" id="regionNote"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3 · AGE -->
+  <!-- 02 AGE -->
   <section id="age">
-    <div class="wrap">
-      <div class="rv">
-        <div class="eyebrow"><i></i>How old our clients are</div>
-        <h2 class="sec">The audience is <span class="gold-text">older</span> — decisively.</h2>
-      </div>
-      <div class="card card-pad rv" style="margin-top:clamp(24px,2.4vw,40px)">
-        <div class="card-title">Share of leads by age band</div>
-        <div class="age-cols" id="ageCols"></div>
-        <div class="concentration">
-          <div class="card-title" style="margin-bottom:14px">Concentration</div>
-          <div class="conc-bar" id="concBar"></div>
-          <div class="brackets" id="brk45"></div>
-          <div class="brackets" id="brk55"></div>
+    <div class="sec-head reveal"><span class="sec-num">02</span><h2>The age of our clients</h2></div>
+    <p class="sec-sub reveal">Share of our client base by age band. The single largest group is 65 and over.</p>
+    <div class="age-grid">
+      <div class="cols" id="cols"></div>
+      <div class="stackwrap reveal">
+        <div>
+          <div class="stack-label"><span>Aged 45 and over</span><b>76.1%</b></div>
+          <div class="stack"><div class="seg on" data-w="76.1"></div><div class="seg off" data-w="23.9"></div></div>
         </div>
-        <div class="foot-note" id="ageNote"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4 · GENDER -->
-  <section id="who">
-    <div class="wrap">
-      <div class="rv">
-        <div class="eyebrow"><i></i>Who they are</div>
-        <h2 class="sec">Seven in ten are women.</h2>
-      </div>
-      <div class="two-col rv" style="margin-top:clamp(24px,2.4vw,40px)">
-        <div class="card card-pad">
-          <div class="card-title">Leads by gender</div>
-          <div class="donut-wrap">
-            <svg class="donut" viewBox="0 0 200 200" id="donut" role="img" aria-label="Gender split of leads"></svg>
-            <div class="legend" id="genderLegend"></div>
-          </div>
+        <div>
+          <div class="stack-label"><span>Aged 55 and over</span><b>56.6%</b></div>
+          <div class="stack"><div class="seg on" data-w="56.6"></div><div class="seg off" data-w="43.4"></div></div>
         </div>
-        <div class="card card-pad">
-          <div class="card-title">Cost per lead by gender</div>
-          <div class="mini-rows" id="genderCpl"></div>
-          <div class="foot-note" id="genderNote"></div>
+        <div>
+          <div class="stack-label"><span>Aged 65 and over</span><b>34.8%</b></div>
+          <div class="stack"><div class="seg on" data-w="34.8"></div><div class="seg off" data-w="65.2"></div></div>
+        </div>
+        <div>
+          <div class="stack-label"><span>Under 35</span><b>10.5%</b></div>
+          <div class="stack"><div class="seg on" data-w="10.5"></div><div class="seg off" data-w="89.5"></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5 · EFFICIENCY -->
-  <section id="efficiency">
-    <div class="wrap">
-      <div class="rv">
-        <div class="eyebrow"><i></i>Efficiency</div>
-        <h2 class="sec">The biggest segment is also the cheapest.</h2>
-      </div>
-      <div class="eff-grid rv" style="margin-top:clamp(24px,2.4vw,40px)">
-        <div class="card card-pad">
-          <div class="card-title">CPL by age band</div>
-          <div class="reftag" id="refTagA"><i></i></div>
-          <div class="lolli" id="cplAge"></div>
-          <div class="eff-scale" id="scaleAge"></div>
+  <!-- 03 GENDER -->
+  <section id="gender">
+    <div class="sec-head reveal"><span class="sec-num">03</span><h2>Women and men</h2></div>
+    <p class="sec-sub reveal">Share of our client base by gender.</p>
+    <div class="gen">
+      <div class="gcard lead reveal">
+        <div class="donut">
+          <svg viewBox="0 0 150 150" width="150" height="150"><circle class="ring" cx="75" cy="75" r="62"/><circle class="val" cx="75" cy="75" r="62" data-pct="70.8"/></svg>
+          <div class="mid" data-cu="70.8" data-dec="1" data-suffix="%">0%</div>
         </div>
-        <div class="card card-pad">
-          <div class="card-title">CPL by leading state / province</div>
-          <div class="reftag" id="refTagB"><i></i></div>
-          <div class="lolli" id="cplRegion"></div>
-          <div class="eff-scale" id="scaleRegion"></div>
-        </div>
+        <h3>Women</h3>
       </div>
-      <div class="eff-callouts rv" id="effCallouts"></div>
+      <div class="gcard men reveal">
+        <div class="donut">
+          <svg viewBox="0 0 150 150" width="150" height="150"><circle class="ring" cx="75" cy="75" r="62"/><circle class="val" cx="75" cy="75" r="62" data-pct="27.9"/></svg>
+          <div class="mid" data-cu="27.9" data-dec="1" data-suffix="%">0%</div>
+        </div>
+        <h3>Men</h3>
+      </div>
+      <div class="gcard und reveal">
+        <div class="donut">
+          <svg viewBox="0 0 150 150" width="150" height="150"><circle class="ring" cx="75" cy="75" r="62"/><circle class="val" cx="75" cy="75" r="62" data-pct="1.3"/></svg>
+          <div class="mid" data-cu="1.3" data-dec="1" data-suffix="%">0%</div>
+        </div>
+        <h3>Undeclared</h3>
+      </div>
     </div>
   </section>
 
-  <!-- 6 · TAKEAWAYS -->
-  <section id="board" class="brk-2">
-    <div class="wrap">
-      <div class="rv">
-        <div class="eyebrow"><i></i>What the board should take away</div>
-        <h2 class="sec">Four numbers that decide the next quarter.</h2>
-      </div>
-      <div class="take-list rv" id="takeaways" style="margin-top:clamp(24px,2.4vw,40px)"></div>
+  <!-- 04 TAKEAWAYS -->
+  <section id="take">
+    <div class="sec-head reveal"><span class="sec-num">04</span><h2>Four things to know</h2></div>
+    <div class="take">
+      <div class="t reveal"><div class="k">01</div><div class="b">Our audience is concentrated: <span>77.5%</span> of clients sit in four states — Texas, California, New York and Florida.</div></div>
+      <div class="t reveal"><div class="k">02</div><div class="b">Our audience is mature. <span>76.1%</span> are 45 or over, and <span>34.8%</span> — the largest single band — are 65 or over.</div></div>
+      <div class="t reveal"><div class="k">03</div><div class="b">Our audience is predominantly female, at <span>70.8%</span> of the client base.</div></div>
+      <div class="t reveal"><div class="k">04</div><div class="b">Canada is <span>3.6%</span> of clients, led by Ontario at <span>2.3%</span>. The United States accounts for the remaining <span>96.4%</span>.</div></div>
     </div>
   </section>
-</main>
 
-<footer>
-  <div class="wrap">
-    <div class="fgrid">
-      <div>
-        <div class="fk">Data source</div>
-        <div class="fv" id="fSource"></div>
+  <footer>
+    <div class="f-row">
+      <div class="fl">
+        Source: Meta advertising demographic breakdowns, 1 April – 31 July 2026, United States and Canada.<br>
+        All figures are shares of the client base and total 100% within each cut. Shares are rounded to one decimal.<br>
+        A small share of records carry no declared state or age and are shown as undeclared or omitted where nil.
       </div>
-      <div>
-        <div class="fk">Period</div>
-        <div class="fv" id="fPeriod"></div>
-      </div>
-      <div>
-        <div class="fk">Methodology</div>
-        <div class="fv">Leads counted as Meta lead-form completions (leadgen). Link-click results excluded, which is why totals differ from the raw pivot's 13,202 “Results” figure.</div>
+      <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-end">
+        <div class="f-logos">
+          <img src="assets/acadomia-blue.png" alt="Acadomia" style="filter:brightness(0) invert(1)">
+          <img src="assets/eteacher-group.png" alt="eTeacher Group" style="filter:brightness(0) invert(1)">
+        </div>
+        <button class="btn" onclick="window.print()">Print / PDF</button>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>
 
-<script src="app.js"></script>
+<script>
+const REGION=[
+ {k:"Texas",v:32.3,c:"us"},{k:"California",v:16.6,c:"us"},{k:"New York",v:14.9,c:"us"},
+ {k:"Florida",v:13.8,c:"us"},{k:"Illinois",v:5.1,c:"us"},{k:"Pennsylvania",v:4.6,c:"us"},
+ {k:"New Jersey",v:3.5,c:"us"},{k:"Massachusetts",v:2.8,c:"us"},{k:"Ontario",v:2.3,c:"ca"},
+ {k:"Louisiana",v:1.9,c:"us"},{k:"British Columbia",v:0.5,c:"ca"},{k:"Washington",v:0.5,c:"us"},
+ {k:"Alberta",v:0.5,c:"ca"},{k:"Oregon",v:0.3,c:"us"},{k:"Manitoba",v:0.2,c:"ca"},
+ {k:"Delaware",v:0.1,c:"us"},{k:"Rhode Island",v:0.1,c:"us"},{k:"Nova Scotia",v:0.05,c:"ca"}];
+const AGE=[{k:"18–24",v:2.3},{k:"25–34",v:8.2},{k:"35–44",v:13.4},{k:"45–54",v:19.4},{k:"55–64",v:21.8},{k:"65+",v:34.8}];
+
+const MAXR=REGION[0].v, MAXA=Math.max(...AGE.map(a=>a.v));
+const rank=document.getElementById('rank');
+REGION.forEach((r,i)=>{
+  const d=document.createElement('div');
+  d.className='row reveal'+(r.c==='ca'?' ca':'')+(r.v<1?' tiny':'');
+  d.style.transitionDelay=(Math.min(i,12)*32)+'ms';
+  d.innerHTML='<div class="name"><span class="flag '+r.c+'"></span>'+r.k+'</div>'+
+    '<div class="track"><div class="fill" data-w="'+(r.v/MAXR*100)+'"></div></div>'+
+    '<div class="pct">'+(r.v<0.1?r.v.toFixed(2):r.v.toFixed(1))+'%</div>';
+  rank.appendChild(d);
+});
+const cols=document.getElementById('cols');
+AGE.forEach((a,i)=>{
+  const hi=a.v>=19;
+  const d=document.createElement('div');
+  d.className='col reveal'+(hi?' hi':'');
+  d.style.transitionDelay=(i*60)+'ms';
+  d.innerHTML='<div class="bar c'+i+'" data-h="'+(a.v/MAXA*100)+'"><span class="v">'+a.v.toFixed(1)+'%</span></div><div class="lab">'+a.k+'</div>';
+  cols.appendChild(d);
+});
+
+function countUp(el){
+  const t=parseFloat(el.dataset.cu), dec=parseInt(el.dataset.dec||0), sfx=el.dataset.suffix||'';
+  const hasSup=el.querySelector('sup')!==null, dur=850, t0=performance.now();
+  if(el.dataset.done) return; el.dataset.done=1;
+  function step(now){
+    const p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,3), val=(t*e).toFixed(dec);
+    el.innerHTML = hasSup ? val+'<sup>%</sup>' : val+sfx;
+    if(p<1) requestAnimationFrame(step);
+    else el.innerHTML = hasSup ? t.toFixed(dec)+'<sup>%</sup>' : t.toFixed(dec)+sfx;
+  }
+  requestAnimationFrame(step);
+}
+function settleAll(){
+  document.querySelectorAll('[data-cu]').forEach(el=>{
+    const t=parseFloat(el.dataset.cu),dec=parseInt(el.dataset.dec||0),sfx=el.dataset.suffix||'';
+    el.dataset.done=1;
+    el.innerHTML = el.querySelector('sup')||el.closest('.stat') ? t.toFixed(dec)+'<sup>%</sup>' : t.toFixed(dec)+sfx;
+  });
+  document.querySelectorAll('.fill[data-w],.seg[data-w]').forEach(f=>f.style.width=f.dataset.w+'%');
+  document.querySelectorAll('.bar[data-h]').forEach(b=>b.style.height=b.dataset.h+'%');
+  document.querySelectorAll('.val[data-pct]').forEach(c=>{const l=R*parseFloat(c.dataset.pct)/100;c.style.strokeDasharray=l+' '+(R-l)});
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+window.addEventListener('beforeprint',settleAll);
+setTimeout(settleAll,1400);
+window.addEventListener('load',()=>setTimeout(settleAll,1400));
+if(location.search.indexOf('static')>-1){document.documentElement.style.setProperty('--noanim','1');
+  const s=document.createElement('style');s.textContent='*{transition:none!important}';document.head.appendChild(s);
+  requestAnimationFrame(()=>requestAnimationFrame(settleAll));}
+const R=2*Math.PI*62;
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el=e.target; el.classList.add('in');
+    el.querySelectorAll('[data-cu]').forEach(countUp);
+    if(el.dataset && el.dataset.cu) countUp(el);
+    el.querySelectorAll('.fill[data-w],.seg[data-w]').forEach(f=>{setTimeout(()=>f.style.width=f.dataset.w+'%',60)});
+    el.querySelectorAll('.bar[data-h]').forEach(b=>{setTimeout(()=>b.style.height=b.dataset.h+'%',60)});
+    el.querySelectorAll('.val[data-pct]').forEach(c=>{
+      setTimeout(()=>{const l=R*parseFloat(c.dataset.pct)/100;c.style.strokeDasharray=l+' '+(R-l)},60)});
+    io.unobserve(el);
+  });
+},{threshold:.18,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.stackwrap .seg,.stack-label').forEach(()=>{});
+new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  e.target.querySelectorAll('.seg[data-w]').forEach(s=>setTimeout(()=>s.style.width=s.dataset.w+'%',80));
+  e.target.querySelectorAll('b').forEach(()=>{});}})},{threshold:.3})
+  .observe(document.querySelector('.stackwrap'));
+</script>
 </body>
 </html>
